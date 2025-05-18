@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">nk
+    {%block css%}{%endblock css%}
+</head>
+<body>
+    
+    <nav>
+        <a href="{% url 'home' %}">Homepage</a>
+    </nav>
+
+    {% block body %}
+    <!-- Child templates will inject content here -->
+    {% endblock %}
+        
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>
